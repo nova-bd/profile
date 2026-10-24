@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100c1d">
+  <meta name="description" content="GitHub Pages এবং Pages CMS-এর একটি টেস্ট ওয়েবসাইট">
+  <title>Pages CMS — Live Demo</title>
+  <style>
+    :root { --accent: #a78bfa; --ink: #f8f5ff; --muted: #b1a9c5; --line: rgba(255,255,255,.12); }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-height: 100vh; color: var(--ink); font-family: system-ui, -apple-system, "Noto Sans Bengali", "Hind Siliguri", sans-serif; background: #100c1d; }
+    body:before { content: ""; position: fixed; pointer-events: none; inset: 0; z-index: -1; background: radial-gradient(ellipse 70% 60% at 82% 9%,rgba(136,80,212,.26),transparent 75%), radial-gradient(ellipse 55% 60% at 0% 75%,rgba(39,135,169,.11),transparent 80%); }
+    a { color: inherit; }
+    .container { width: min(1060px, calc(100% - 42px)); margin: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.03em; font-size: 19px; }
+    .logo-mark { display: grid; place-items: center; border-radius: 13px; width: 37px; height: 37px; background: var(--accent); color: #160e25; font-weight: 900; font-size: 21px; }
+    .nav-link { text-decoration: none; border: 1px solid var(--line); padding: 10px 17px; border-radius: 100px; color: #e9defb; font-size: 13px; }
+    .nav-link:hover { border-color: var(--accent); }
+    main { padding-top: 104px; padding-bottom: 95px; }
+    .hero { max-width: 850px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(167,139,250,.27); border-radius: 99px; background: rgba(167,139,250,.10); padding: 8px 15px; color: #d4c3ff; font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow:before { content:""; display:block; width: 7px; height: 7px; border-radius: 50%; background: #7defb6; box-shadow: 0 0 15px #7defb6; }
+    h1 { font-size: clamp(43px, 7.3vw, 85px); letter-spacing: -.063em; line-height: 1.15; margin: 25px 0 22px; font-weight: 850; }
+    h1 .accent { color: var(--accent); }
+    .description { color: var(--muted); font-size: clamp(17px, 2vw, 20px); line-height: 1.95; max-width: 700px; margin: 0; }
+    .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 31px; }
+    .primary { background: var(--accent); color: #1a1027; padding: 16px 25px; font-weight: 780; text-decoration: none; border-radius: 12px; transition: transform .2s, box-shadow .2s; }
+    .primary:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(167,139,250,.23); }
+    .note { color: #9e96b0; font-size: 13px; }
+    .notice { padding: 20px 23px; border: 1px solid rgba(167,139,250,.26); background: rgba(167,139,250,.08); border-radius: 16px; margin-top: 70px; line-height: 1.8; }
+    .section-head { margin-top: 67px; margin-bottom: 24px; }
+    .section-head h2 { margin: 0 0 8px; font-size: 27px; letter-spacing: -.03em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .feature { padding: 27px; border: 1px solid var(--line); background: rgba(255,255,255,.035); border-radius: 17px; }
+    .feature .symbol { display: grid; place-items: center; width: 47px; height: 47px; border: 1px solid rgba(167,139,250,.25); border-radius: 13px; background: rgba(167,139,250,.12); font-size: 21px; }
+    .feature h3 { margin: 19px 0 7px; font-size: 20px; }
+    .feature p { margin: 0; color: var(--muted); line-height: 1.85; font-size: 15px; }
+    footer { padding: 30px 0 42px; border-top: 1px solid var(--line); color: #998da9; font-size: 13px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    #load-status { color: #8dd4b4; }
+    @media (max-width: 640px) { .nav { min-height: 68px; } .nav-link { padding: 9px 12px; } .logo { font-size: 16px; } main { padding-top: 69px; padding-bottom: 70px; } .grid { grid-template-columns: 1fr; } .notice { margin-top: 50px; } h1 { letter-spacing: -.045em; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="logo-mark">P</span> Pages CMS <span style="color:#9c8cb9;font-size:13px;font-weight:500">Demo</span></div>
+      <a class="nav-link" href="#features">কীভাবে কাজ করে ↗</a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" aria-label="Introduction">
+      <span class="eyebrow" id="eyebrow">PAGES CMS + GITHUB PAGES</span>
+      <h1><span id="title">আপনার ওয়েবসাইট, আপনার নিয়ন্ত্রণ।</span> <span class="accent">✳</span></h1>
+      <p class="description" id="description">Pages CMS থেকে আপনার ওয়েবসাইটের লেখা বদলে টেস্ট করুন।</p>
+      <div class="actions">
+        <a class="primary" id="cta" href="https://app.pagescms.org" target="_blank" rel="noopener noreferrer">Pages CMS খুলুন ↗</a>
+        <span class="note">বিনামূল্যে • কোনো ডাটাবেস নেই</span>
+      </div>
+    </section>
+    <aside class="notice" id="highlight">✨ Pages CMS থেকে লেখাগুলো পরিবর্তন করে টেস্ট করুন।</aside>
+    <section id="features" aria-label="Features">
+      <div class="section-head"><h2>একটি ছোট ওয়েবসাইট, সহজ CMS</h2><p>এই দুটি কার্ডের লেখাও Pages CMS-এ পরিবর্তন করতে পারবেন।</p></div>
+      <div class="grid">
+        <article class="feature"><span class="symbol" aria-hidden="true">✏️</span><h3 id="feature_1_title">সহজ এডিটিং</h3><p id="feature_1_text">একটি ফর্ম থেকেই লেখা বদলানো যাবে।</p></article>
+        <article class="feature"><span class="symbol" aria-hidden="true">↗</span><h3 id="feature_2_title">GitHub-এ সেভ</h3><p id="feature_2_text">আপনার পরিবর্তন GitHub-এ সেভ হয়।</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span id="footer_note">Made for testing Pages CMS</span><span id="load-status" role="status" aria-live="polite">Loading CMS content…</span></div></footer>
+  <script>
+    // Pages CMS edits content.json. This page reads it on every refresh.
+    const fields = ["eyebrow", "title", "description", "highlight", "feature_1_title", "feature_1_text", "feature_2_title", "feature_2_text", "footer_note"];
+    async function loadContent() {
+      const status = document.getElementById("load-status");
+      try {
+        // Cache-busting helps show recent updates after GitHub Pages deploys.
+        const response = await fetch(`./content.json?v=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const data = await response.json();
+        for (const field of fields) {
+          if (typeof data[field] === "string") document.getElementById(field).textContent = data[field];
+        }
+        if (typeof data.button_text === "string") document.getElementById("cta").textContent = data.button_text + " ↗";
+        if (typeof data.button_url === "string") {
+          try {
+            const url = new URL(data.button_url, window.location.href);
+            if (["https:", "http:"].includes(url.protocol)) document.getElementById("cta").href = url.href;
+          } catch (_) { /* Keep the safe default link. */ }
+        }
+        if (typeof data.accent_color === "string" && /^#[\da-fA-F]{6}$/.test(data.accent_color)) {
+          document.documentElement.style.setProperty("--accent", data.accent_color);
+        }
+        status.textContent = "✓ CMS content loaded";
+      } catch (error) {
+        status.textContent = "Preview mode • Host on GitHub Pages to load content.json";
+        status.style.color = "#eac88d";
+        console.warn("Could not load content.json:", error);
+      }
+    }
+    loadContent();
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "eyebrow": "PAGES CMS + GITHUB PAGES",
+  "title": "আপনার ওয়েবসাইট, আপনার নিয়ন্ত্রণ।",
+  "description": "এটি একটি লাইভ CMS টেস্ট ওয়েবসাইট। Pages CMS ড্যাশবোর্ড থেকে এই শিরোনাম, লেখা, বাটন ও রঙ পরিবর্তন করুন—GitHub Pages-এ আপডেট দেখুন।",
+  "button_text": "Pages CMS খুলুন",
+  "button_url": "https://app.pagescms.org",
+  "highlight": "✨ টেস্ট করুন: Pages CMS → Homepage Content → Main Heading বদলান → Save করুন।",
+  "feature_1_title": "সহজ এডিটিং",
+  "feature_1_text": "একটি ফর্ম থেকেই আপনার ওয়েবসাইটের লেখা বদলানো যাবে। HTML খুলতে হবে না।",
+  "feature_2_title": "GitHub-এ সেভ",
+  "feature_2_text": "CMS-এর পরিবর্তন সরাসরি GitHub রিপোজিটরিতে কমিট হয়, তারপর সাইট আপডেট হয়।",
+  "footer_note": "Made for testing Pages CMS • No database needed",
+  "accent_color": "#a78bfa"
+}

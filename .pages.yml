@@ -1,0 +1,58 @@
+# Pages CMS configuration
+# Keep this file at the root of your GitHub repository.
+media: media
+
+content:
+  - name: homepage
+    label: Homepage Content
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: eyebrow
+        label: Small Label
+        type: string
+        required: true
+      - name: title
+        label: Main Heading
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: button_text
+        label: Button Text
+        type: string
+        required: true
+      - name: button_url
+        label: Button Link (https://...)
+        type: string
+        required: true
+      - name: highlight
+        label: Highlight Message
+        type: text
+      - name: feature_1_title
+        label: Feature 1 Heading
+        type: string
+      - name: feature_1_text
+        label: Feature 1 Description
+        type: text
+      - name: feature_2_title
+        label: Feature 2 Heading
+        type: string
+      - name: feature_2_text
+        label: Feature 2 Description
+        type: text
+      - name: footer_note
+        label: Footer Note
+        type: string
+      - name: accent_color
+        label: Accent Color (#8b5cf6)
+        type: string
+
+  - name: html_source
+    label: Advanced - index.html
+    type: file
+    path: index.html
+    format: code
